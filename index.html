@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Animation - Hanya circuit lines -->
+    <div class="circuit-line" style="top: 10%;"></div>
+    <div class="circuit-line" style="top: 30%;"></div>
+    <div class="circuit-line" style="top: 60%;"></div>
+    <div class="circuit-line" style="top: 90%;"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full glassmorphic z-50 navbar">
+        <div class="container mx-auto flex items-center justify-between px-0 h-16">
+            <div class="flex-1 flex items-center h-full">
+                <a href="#" class="text-xl text-[#00ffcc] nav-title">Portofolio Proyek</a>
+            </div>
+            <div class="nav-mobile flex items-center md:hidden h-full">
+                <a href="#contact"
+                    class="text-white hover:text-[#00ffcc] transition mx-2 text-base h-full flex items-center">Kontak</a>
+                <button id="selengkapnyaBtn"
+                    class="text-white hover:text-[#00ffcc] transition mx-2 text-base bg-transparent border-none focus:outline-none h-full flex items-center">Selengkapnya</button>
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="#about" class="text-white hover:text-[#00ffcc] transition px-4">Tentang</a>
+                <a href="#skills" class="text-white hover:text-[#00ffcc] transition px-4">Skill</a>
+                <a href="#projects" class="text-white hover:text-[#00ffcc] transition px-4">Proyek</a>
+                <a href="#testimonials" class="text-white hover:text-[#00ffcc] transition px-4">Testimoni</a>
+                <a href="#contact" class="text-white hover:text-[#00ffcc] transition px-4">Kontak</a>
+            </div>
+        </div>
+        <!-- Overlay Menu -->
+        <div id="mobileMenu" class="mobile-menu-overlay">
+            <button id="closeMenu" class="mobile-menu-close">&times;</button>
+            <a href="#hero" class="mobile-menu-link">Profil</a>
+            <a href="#about" class="mobile-menu-link">Tentang Saya</a>
+            <a href="#skills" class="mobile-menu-link">Skill</a>
+            <a href="#projects" class="mobile-menu-link">Proyek</a>
+            <a href="#testimonials" class="mobile-menu-link">Testimoni</a>
+            <a href="#contact" class="mobile-menu-link">Hubungi Saya</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative pt-16 hero-section">
+        <div class="container mx-auto px-6 text-center">
+            <div class="relative w-40 h-40 mx-auto mb-6">
+                <img src="image/Profil1.jpg" alt="Digital Avatar" class="rounded-full glassmorphic digital-avatar">
+            </div>
+            <h3 class="text-4xl md:text-6xl text-white mb-4 md:mb-8 hero-title">Halo, saya Aditya</h3>
+            <div class="text-center">
+                <h2 class="text-xl md:text-3xl text-[#00ffcc] typing inline-block" id="tagline">Selamat datang dan selamat melihat</h2>
+            </div>
+            <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Creative Informatics Expert | AI-driven UX/UI Designer and
+                Mobile Front End Developer</p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="#projects"
+                    class="px-6 py-3 hero-button text-[#00ffcc] rounded-lg hover:bg-[#00ffcc] hover:text-[#0a0a0f] transition duration-300">Lihat
+                    Proyek</a>
+                <a href="cv-aditya.pdf" download="CV-Aditya.pdf"
+                    class="px-6 py-3 hero-button text-[#ff00ff] rounded-lg hover:bg-[#ff00ff] hover:text-[#0a0a0f] transition duration-300">Unduh
+                    CV</a>
+                <a href="#contact"
+                    class="px-6 py-3 hero-button text-[#00ff00] rounded-lg hover:bg-[#00ff00] hover:text-[#0a0a0f] transition duration-300">Hubungi
+                    Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl text-center text-white mb-12">Tentang Saya</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 about-divider">
+                <div class="w-full md:w-1/2 pr-0 md:pr-8 pl-8 relative group">
+                    <img src="image/Profil2.jpg" alt="About Image"
+                        class="rounded-lg glassmorphic about-img transition-transform duration-300" id="about-img">
+                </div>
+                <div class="w-full md:w-1/2 text-gray-300 transition-all duration-300" id="about-desc">
+                    <p class="text-justify py-6">
+                        Sebagai mahasiswa D4 Manajemen Informatika Universitas Negeri Surabaya yang dinamis, saya
+                        memiliki minat mendalam pada UI/UX design dan desain grafis (termasuk ilustrasi poster). Saya
+                        mahir dalam pengembangan web menggunakan HTML, CSS, dan PHP, serta memiliki pengalaman dasar
+                        membangun aplikasi sederhana dengan Flutter. Saya aktif memanfaatkan AI tools untuk eksplorasi
+                        referensi desain dan efisiensi pengembangan. Kemampuan adaptasi, fokus, dan strategi yang saya
+                        asah melalui hobi badminton, membuat saya siap untuk belajar dan memberikan kontribusi nyata
+                        dalam lingkungan magang yang inovatif.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tech Stack -->
+    <section id="skills" class="py-20 bg-[#0a0a0f]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl text-center text-white mb-12">Keterampilan & Teknologi</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 gap-y-8 items-center">
+                <div class="tech-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                        alt="Flutter" />
+                    <span>Flutter</span>
+                </div>
+                <div class="tech-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" />
+                    <span>Dart</span>
+                </div>
+                <div class="tech-logo">
+                    <img src="https://static.vecteezy.com/system/resources/previews/046/861/659/non_2x/adobe-creative-express-cloud-icon-free-png.png"
+                        alt="Adobe Creative Cloud" />
+                    <span>Adobe Creative</span>
+                </div>
+                <div class="tech-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript" />
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+                    <span>PHP</span>
+                </div>
+                <div class="tech-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python" />
+                    <span>Python</span>
+                </div>
+                <div class="tech-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+                    <span>Figma</span>
+                </div>
+                <div class="tech-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+                    <span>MySQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl text-center text-white mb-12">Proyek</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 - UI/UX Web Porto -->
+                <div class="project-card p-6 rounded-lg">
+                    <a href="https://www.figma.com/design/zCxy8L1UE2TuJqVqe7ojnN/Web-Portofolio-1?node-id=0-1&t=xsPogSYJI3LLFVNz-1" target="_blank">
+                        <img src="image-project/Portofolio.png" alt="UI/UX Web Porto" class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <h3 class="text-xl text-[#00ffcc] mb-2 project-title">UI/UX Web Porto</h3>
+                    <p class="text-gray-300 mb-4 project-description">Desain antarmuka pengguna untuk website portofolio dengan konsep modern dan minimalis yang mengutamakan user experience.</p>
+                    <button onclick="toggleDetail(0)" id="btn-0" class="text-[#00bfff] hover:text-white transition italic">Lihat Detail</button>
+                    <div id="detail-0" class="hidden mt-4 text-gray-300 project-detail-content">
+                        <p class="mb-2"><span class="text-[#00ffcc]">Teknologi	:</span> Figma</p>
+                        <p class="mb-2"><span class="text-[#00ffcc]">Fitur		:</span> Layout responsif, tipografi bersih, prototipe interaktif</p>
+                        <p><span class="text-[#00ffcc]">Durasi		:</span> 3 jam pengembangan</p>
+                        <a href="https://www.figma.com/design/zCxy8L1UE2TuJqVqe7ojnN/Web-Portofolio-1?node-id=0-1&t=xsPogSYJI3LLFVNz-1" target="_blank" class="inline-block mt-2 text-[#00ffcc] hover:underline">Lihat UI/UX Design</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Shortly -->
+                <div class="project-card p-6 rounded-lg">
+                    <a href="https://www.figma.com/design/y7g55GlmLjFbAGcJmHs5cH/Shortly?node-id=0-1&t=OUpLa3zVrXsD8Mk5-1" target="_blank">
+                        <img src="image-project/Shortly.png" alt="Shortly App Design" class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <h3 class="text-xl text-[#00ffcc] mb-2 project-title">Shortly</h3>
+                    <p class="text-gray-300 mb-4 project-description">Desain UI untuk aplikasi URL shortener dengan interface yang sederhana dan fungsional untuk memudahkan pengguna mempersingkat link.</p>
+                    <button onclick="toggleDetail(1)" id="btn-1" class="text-[#00bfff] hover:text-white transition italic">Lihat Detail</button>
+                    <div id="detail-1" class="hidden mt-4 text-gray-300 project-detail-content">
+                        <p class="mb-2"><span class="text-[#00ffcc]">Teknologi	:</span> Figma</p>
+                        <p class="mb-2"><span class="text-[#00ffcc]">Fitur		:</span> Antarmuka pemendek URL, pelacakan riwayat, dashboard analitik</p>
+                        <p><span class="text-[#00ffcc]">Durasi		:</span> 1 hari pengembangan</p>
+                        <a href="https://www.figma.com/design/y7g55GlmLjFbAGcJmHs5cH/Shortly?node-id=0-1&t=OUpLa3zVrXsD8Mk5-1" target="_blank" class="inline-block mt-2 text-[#00ffcc] hover:underline">Lihat Design</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 - TravelPal -->
+                <div class="project-card p-6 rounded-lg">
+                    <a href="https://www.figma.com/design/4zkAwqbC4prONsF6I7sB04/TravelPal?node-id=0-1&t=D9ihLkA11pGsRnTV-1" target="_blank">
+                        <img src="image-project/TravelPal.png" alt="TravelPal App Design" class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <h3 class="text-xl text-[#00ffcc] mb-2 project-title">TravelPal</h3>
+                    <p class="text-gray-300 mb-4 project-description">Desain aplikasi mobile untuk travel companion yang membantu pengguna merencanakan perjalanan dengan fitur booking dan rekomendasi destinasi.</p>
+                    <button onclick="toggleDetail(2)" id="btn-2" class="text-[#00bfff] hover:text-white transition italic">Lihat Detail</button>
+                    <div id="detail-2" class="hidden mt-4 text-gray-300 project-detail-content">
+                        <p class="mb-2"><span class="text-[#00ffcc]">Teknologi	:</span> Figma</p>
+                        <p class="mb-2"><span class="text-[#00ffcc]">Fitur		:</span> Perencanaan perjalanan, pemesanan hotel, panduan destinasi, pelacak pengeluaran</p>
+                        <p><span class="text-[#00ffcc]">Durasi		:</span> 1 hari pengembangan</p>
+                        <a href="https://www.figma.com/design/4zkAwqbC4prONsF6I7sB04/TravelPal?node-id=0-1&t=D9ihLkA11pGsRnTV-1" target="_blank" class="inline-block mt-2 text-[#00ffcc] hover:underline">Lihat Design</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 - Web Portofolio -->
+                <div class="project-card p-6 rounded-lg">
+                    <a href="" target="_blank">
+                        <img src="image-project/Porto.png" alt="Web Portofolio" class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <h3 class="text-xl text-[#00ffcc] mb-2 project-title">Web Portofolio</h3>
+                    <p class="text-gray-300 mb-4 project-description">Website portofolio personal yang responsif dengan animasi interaktif dan desain modern untuk menampilkan karya dan pengalaman profesional.</p>
+                    <button onclick="toggleDetail(3)" id="btn-3" class="text-[#00bfff] hover:text-white transition italic">Lihat Detail</button>
+                    <div id="detail-3" class="hidden mt-4 text-gray-300 project-detail-content">
+                        <p class="mb-2"><span class="text-[#00ffcc]">Teknologi	:</span> HTML, CSS, JavaScript, Figma, VS Code</p>
+                        <p class="mb-2"><span class="text-[#00ffcc]">Fitur		:</span> Desain responsif, animasi halus, formulir kontak, showcase proyek</p>
+                        <p><span class="text-[#00ffcc]">Durasi		:</span> 4 Jam</p>
+                        <a href="" target="_blank" class="inline-block mt-2 text-[#00ffcc] hover:underline">Lihat UI/UX Design</a>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Aplikasi Quiz Sederhana -->
+                <div class="project-card p-6 rounded-lg">
+                    <a href="https://github.com/Aditya2825-debug/Aplikasi-Quiz-Sederhana" target="_blank">
+                        <img src="image-project/Quiz.png" alt="Aplikasi Quiz" class="w-full h-48 object-cover rounded-lg mb-4 hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <h3 class="text-xl text-[#00ffcc] mb-2 project-title">Aplikasi Quiz Sederhana</h3>
+                    <p class="text-gray-300 mb-4 project-description">Aplikasi mobile quiz interaktif dengan berbagai kategori soal dan sistem scoring untuk meningkatkan pembelajaran dan pengetahuan pengguna.</p>
+                    <button onclick="toggleDetail(4)" id="btn-4" class="text-[#00bfff] hover:text-white transition italic">Lihat Detail</button>
+                    <div id="detail-4" class="hidden mt-4 text-gray-300 project-detail-content">
+                        <p class="mb-2"><span class="text-[#00ffcc]">Teknologi	:</span> Flutter, Dart, Android Studio</p>
+                        <p class="mb-2"><span class="text-[#00ffcc]">Fitur		:</span> Soal pilihan ganda, timer, pelacakan skor, pemilihan kategori</p>
+                        <p><span class="text-[#00ffcc]">Durasi		:</span> 6 Jam</p>
+                        <a href="https://github.com/Aditya2825-debug/Aplikasi-Quiz-Sederhana" target="_blank" class="inline-block mt-2 text-[#00ffcc] hover:underline">Lihat Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-[#0a0a0f]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl text-center text-white mb-12">Testimoni</h2>
+            <div id="testimonials-scroll" class="overflow-x-auto">
+                <div class="flex gap-8 px-2 md:px-10 mt-8" style="min-width: 700px;">
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Aditya sangat membantu dalam pengembangan aplikasi kampus kami. Desainnya modern dan mudah digunakan oleh semua kalangan mahasiswa. Hasilnya memuaskan."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/laki-laki.png" alt="Mahasiswa 1" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#00ffcc] font-bold">Rizky Pratama</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, Universitas Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Kerja sama dengan Aditya itu sangat menyenangkan dan profesional. Hasil desain UI/UX sangat memuaskan dan sesuai ekspektasi kami. Komunikasinya sangat baik."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/perempuan.png" alt="Mahasiswa 2" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#ff00ff] font-bold">Siti Nurhaliza</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, ITS Surabaya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Aplikasi quiz yang dibuat Aditya sangat interaktif dan membantu proses belajar saya. Fitur-fiturnya lengkap dan mudah dipahami. Sangat berguna sekali untuk pembelajaran."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/perempuan.png" alt="Mahasiswa 3" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#00ff00] font-bold">Dewi Lestari</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, Universitas Airlangga</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Sistem perpustakaan yang dikembangkan Aditya sangat mudah di pakai administrasi di kampus saya. Interface yang clean dan fungsional. Benar-benar membantu operasional."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/laki-laki.png" alt="Mahasiswa 4" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#00ffcc] font-bold">Budi Santoso</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, Universitas Brawijaya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Desain portofolio Aditya sangat sangat inspiratif dan profesional. Layoutnya menarik dan mudah dinavigasi oleh para pengunjung website. Hasil kerja yang sangat berkualitas."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/perempuan.png" alt="Mahasiswa 5" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#ff00ff] font-bold">Putri Maharani</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, Universitas Gadjah Mada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Aditya selalu memberikan solusi kreatif untuk setiap tantangan desain. Kemampuan problem solving yang sangat baik. Tim work yang luar biasa dan responsif."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/laki-laki.png" alt="Mahasiswa 6" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#00ff00] font-bold">Andi Wijaya</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, Universitas Negeri Surabaya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Kerja tim bersama Aditya sangat efektif dan komunikatif. Selalu tepat waktu dan cepat dalam menyelesaikan setiap task yang diberikan. Sangat professional dan terpercaya."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/laki-laki.png" alt="Mahasiswa 7" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#00ffcc] font-bold">Fajar Ramadhan</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, Universitas Diponegoro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Aplikasi mobile yang dibuat Aditya sangat user-friendly sekali. Design yang menarik dan performa aplikasi yang smooth. Pengalaman pengguna yang luar biasa baik."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/perempuan.png" alt="Mahasiswa 8" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#ff00ff] font-bold">Nadia Rahma</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, Universitas Padjadjaran</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Aditya sangat responsif dan selalu terbuka untuk feedback. Proses revisi yang cepat dan hasil yang selalu memuaskan. Dedikasi kerja yang sangat tinggi sekali."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/laki-laki.png" alt="Mahasiswa 9" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#00ff00] font-bold">Yusuf Hidayat</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, Universitas Sebelas Maret</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glassmorphic rounded-lg p-6 min-w-[320px] max-w-[400px]">
+                        <p class="text-gray-300 mb-4 text-justify">"Jujur Saya sangat menyarankan Aditya untuk proyek desain dan pengembangan aplikasi. Kualitas kerja yang cepat dan konsisten dan terpercaya. Hasil selalu maksimal."</p>
+                        <div class="flex items-center">
+                            <img src="image-testimoni/perempuan.png" alt="Mahasiswa 10" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="text-[#00ffcc] font-bold">Melati Anggraini</h4>
+                                <p class="text-gray-400 text-sm">Mahasiswa, Universitas Hasanuddin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl text-center text-white mb-12">Hubungi Saya</h2>
+            <div class="max-w-4xl mx-auto glassmorphic p-8 rounded-lg">
+                <div class="text-[#00ffcc] font-mono text-lg mb-6 text-center">> Initiating Contact Protocol...</div>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Kolom Kiri -->
+                    <div class="space-y-4">
+                        <input type="text" placeholder="Nama"
+                            class="w-full p-3 glassmorphic text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00ffcc]">
+                        <input type="email" placeholder="Email"
+                            class="w-full p-3 glassmorphic text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff00ff]">
+                        <input type="tel" placeholder="Nomor Telepon"
+                            class="w-full p-3 glassmorphic text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00ff00]">
+                        <input type="text" placeholder="Subjek"
+                            class="w-full p-3 glassmorphic text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00ffcc]">
+                    </div>
+                    
+                    <!-- Kolom Kanan -->
+                    <div class="space-y-4">
+                        <select class="w-full p-3 glassmorphic text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff00ff] dropdown-select">
+                            <option value="" disabled selected>Jenis Kelamin</option>
+                            <option value="laki-laki" class="bg-[#0a0a0f] text-white dropdown-option">Laki-laki</option>
+                            <option value="perempuan" class="bg-[#0a0a0f] text-white dropdown-option">Perempuan</option>
+                        </select>
+                        <textarea placeholder="Pesan" rows="7"
+                            class="w-full p-3 glassmorphic text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00ff00] resize-none message-textarea"></textarea>
+                    </div>
+                </form>
+                
+                <!-- Tombol dan Social Media -->
+                <div class="mt-6">
+                    <!-- Tombol Kirim yang memanjang sesuai lebar form -->
+                    <button
+                        class="w-full px-8 py-3 glassmorphic text-[#00ffcc] rounded-lg hover:bg-[#00ffcc] hover:text-[#0a0a0f] transition duration-300 mb-6">Kirim Pesan</button>
+                    
+                    <!-- Social Media tetap di tengah -->
+                    <div class="flex justify-center gap-4">
+                        <a href="https://www.linkedin.com/in/aditya-febriano-08b93b288" class="social-icon" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                                alt="LinkedIn" class="w-8 h-8" />
+                        </a>
+                        <a href="https://www.instagram.com/thetyanode" class="social-icon" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                alt="Instagram" class="w-8 h-8" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-gray-400">
+        <p>© 2025 Aditya. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
